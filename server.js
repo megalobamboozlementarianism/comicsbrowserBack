@@ -15,7 +15,7 @@ function listenCB () {
 // Now let's add the static files with express middleware
 
 app.use(cors());
-app.get('/', (req, res)=>{ 
+app.get('/comics', (req, res)=>{ 
   axios.get(req._parsedUrl.query)
   .then(function(response) {
     res.status(200);
